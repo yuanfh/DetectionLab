@@ -7,6 +7,10 @@
 # 4. You MUST manually close each exchange cmd.exe window after completion for installation to continue. 
 #    This allows you to verify that each step in the installation process was successful
 # 5. Once installation is successful, reboot once more. 
+Set-Service TrustedInstaller -StartupType Automatic
+Start-Service TrustedInstaller
+Set-Service wuauserv -StartupType Automatic
+Start-Service wuauserv
 
 $username = 'windomain.local\administrator'
 $password = 'vagrant'
