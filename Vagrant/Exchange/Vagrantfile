@@ -3,6 +3,7 @@ Vagrant.configure("2") do |config|
     cfg.vm.box = "detectionlab/win2016"
     cfg.vm.hostname = "exchange"
     cfg.vm.boot_timeout = 600
+    cfg.winrm.transport = :plaintext
     cfg.vm.communicator = "winrm"
     cfg.winrm.basic_auth_only = true
     cfg.winrm.timeout = 300
